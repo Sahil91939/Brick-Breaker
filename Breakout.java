@@ -110,7 +110,9 @@ public class Breakout extends GraphicsProgram {
 //PRIVATE INSTANCE VARIABLES
 	private GRect brick,paddle ;
 	private Color color;
+	private GOval ball ;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	//private instance variables for the velocities of the ball in both x & y direction
 	private double vx,vy;
+	
 }
