@@ -71,7 +71,7 @@ public class Breakout extends GraphicsProgram {
 		addMouseListeners();
 		ball =new GOval(BALL_RADIUS,BALL_RADIUS);
 		ball.setFilled(true);
-		add(ball,getWidth()/2,getHeight()/2);
+		add(ball,getWidth()/2-BALL_RADIUS/2,getHeight()/2-BALL_RADIUS/2);
 		//vx = rgen.nextDouble(1.0,3.0);
 		while(true){
 			ball.move(vx, vy);
