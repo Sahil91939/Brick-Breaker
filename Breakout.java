@@ -28,7 +28,7 @@ public class Breakout extends GraphicsProgram {
   * CONSTANTS MAY **NOT** ACTUALLY BE THE DIMENSIONS OF THE GRAPHICS
   * CANVAS.  Use getWidth() and getHeight() to get the dimensions of
   * the graphics canvas. */
-	private static final int WIDTH = APPLICATION_WIDTH();
+	private static final int WIDTH = APPLICATION_WIDTH;
 	private static final int HEIGHT = APPLICATION_HEIGHT;
 
 /** Dimensions of the paddle */
