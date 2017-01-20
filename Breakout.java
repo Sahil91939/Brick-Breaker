@@ -120,5 +120,5 @@ public class Breakout extends GraphicsProgram {
 	private GOval ball ;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	//private instance variables for the velocities of the ball in both x & y direction
-	private double vx,vy=3;
+	private double vx,vy;
 }
