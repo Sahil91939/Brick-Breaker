@@ -110,5 +110,4 @@ public class Breakout extends GraphicsProgram {
 //PRIVATE INSTANCE VARIABLES
 	private GRect brick,paddle ;
 	private Color color;
-	
 }
