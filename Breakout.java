@@ -76,11 +76,21 @@ public class Breakout extends GraphicsProgram {
 			for(int i = 0; i < NBRICKS_PER_ROW ; i++){
 				brick = new GRect((getWidth()-WIDTH)/2 + i*(BRICK_WIDTH+BRICK_SEP),BRICK_Y_OFFSET+ j*(BRICK_HEIGHT+BRICK_SEP),BRICK_WIDTH,BRICK_HEIGHT);
 				brick.setFilled(true);
-				brick.setColor(Color.red);
+				if(j%2==0)rainbow(j);
+				brick.setColor(color);
 				add(brick);
 			}
 		}	
 	}
+	
+	private void rainbow(j){
+		switch(j){
+		case 0:color =Color.red;break;
+		case 2:color = Color.orange;break;
+		
+		}
+	}
 //PRIVATE INSTANCE VARIABLES
 	private GRect brick ;
+	private Color color;
 }
