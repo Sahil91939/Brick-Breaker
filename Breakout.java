@@ -72,7 +72,7 @@ public class Breakout extends GraphicsProgram {
 		ball =new GOval(BALL_RADIUS,BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball,getWidth()/2,getHeight()/2);
-		vx = rgen.nextDouble(1.0,3.0);
+		//vx = rgen.nextDouble(1.0,3.0);
 		while(true){
 			ball.move(vx, vy);
 			checkForCollision();
