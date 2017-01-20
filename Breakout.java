@@ -83,7 +83,7 @@ public class Breakout extends GraphicsProgram {
 		}	
 	}
 	
-	private void rainbow(j){
+	private void rainbow(int j){
 		switch(j){
 		case 0:color =Color.red;break;
 		case 2:color = Color.orange;break;
