@@ -69,7 +69,7 @@ public class Breakout extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 		setup();
 		addMouseListeners();
-		ball =new GOval(BALL_RADIUS,BALL_RADIUS);
+		ball =new GOval(2*BALL_RADIUS,2*BALL_RADIUS);
 		ball.setFilled(true);
 		add(ball,getWidth()/2-BALL_RADIUS/2,getHeight()/2-BALL_RADIUS/2);
 		vx = rgen.nextDouble(1.0,3.0);
@@ -110,7 +110,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void checkForCollision(){
-		
+		if(ball.getX()==0||ball.getX()==getWidth())
 	}
 	
 	public void mouseMoved(MouseEvent e){
