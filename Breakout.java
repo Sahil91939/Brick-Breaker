@@ -97,6 +97,10 @@ public class Breakout extends GraphicsProgram {
 		case 8:color = Color.cyan;break;
 		}
 	}
+	
+	//public mouseMoved
+	
+	
 //PRIVATE INSTANCE VARIABLES
 	private GRect brick,paddle ;
 	private Color color;
