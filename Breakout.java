@@ -69,6 +69,7 @@ public class Breakout extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 		setup();
 		addMouseListeners();
+		ball =new GOval(BALL_RADIUS,BALL_RADIUS)
 	}
 
 	private void setup(){
