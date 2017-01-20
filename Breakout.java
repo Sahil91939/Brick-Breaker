@@ -81,7 +81,10 @@ public class Breakout extends GraphicsProgram {
 				add(brick);
 			}
 		}	
+	
+		
 	}
+	
 	
 	private void rainbow(int j){
 		switch(j){
@@ -93,6 +96,6 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 //PRIVATE INSTANCE VARIABLES
-	private GRect brick ;
+	private GRect brick,paddle ;
 	private Color color;
 }
