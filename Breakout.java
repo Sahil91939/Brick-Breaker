@@ -87,7 +87,7 @@ public class Breakout extends GraphicsProgram {
 		
 	}
 	
-	
+	/*The rainbow method switches the color of the rows of bricks every second row */
 	private void rainbow(int j){
 		switch(j){
 		case 0:color =Color.red;break;
