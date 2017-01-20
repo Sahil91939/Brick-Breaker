@@ -98,7 +98,7 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 	
-	//public mouseMoved
+	public mouseMoved
 	
 	
 //PRIVATE INSTANCE VARIABLES
