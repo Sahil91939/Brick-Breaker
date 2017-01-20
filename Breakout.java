@@ -110,7 +110,9 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void checkForCollision(){
-		if(ball.getX()==0||ball.getX()==getWidth())
+		if(ball.getX()==0||ball.getX()==getWidth()-2*BALL_RADIUS){
+			
+		}
 	}
 	
 	public void mouseMoved(MouseEvent e){
