@@ -87,7 +87,7 @@ public class Breakout extends GraphicsProgram {
 		switch(j){
 		case 0:color =Color.red;break;
 		case 2:color = Color.orange;break;
-		case 4:color = Color.yellow;break;
+		case 4:color = Color.mustard;break;
 		case 6:color = Color.green;break;
 		case 8:color = Color.cyan;break;
 		}
