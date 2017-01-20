@@ -70,7 +70,7 @@ public class Breakout extends GraphicsProgram {
 		setup();
 		addMouseListeners();
 		ball =new GOval(BALL_RADIUS,BALL_RADIUS);
-		
+		add(ball,getWidth()/2,getHeight()/2);
 	}
 
 	private void setup(){
