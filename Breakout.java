@@ -75,6 +75,7 @@ public class Breakout extends GraphicsProgram {
 		vx = rgen.nextDouble(1.0,3.0);
 		while(true){
 			ball.move(vx, vy);
+			checkForCollision();
 		}
 	}
 
@@ -105,6 +106,10 @@ public class Breakout extends GraphicsProgram {
 		case 6:color = Color.green;break;
 		case 8:color = Color.cyan;break;
 		}
+	}
+	
+	private void checkForCollision(){
+		
 	}
 	
 	public void mouseMoved(MouseEvent e){
