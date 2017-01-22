@@ -114,10 +114,18 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void checkForCollision(){
-		if(ball.getX()<=0||ball.getX()>=(getWidth()-2*BALL_RADIUS)) {
-			vx=-vx;
-		}
+		if(ball.getX()<=0||ball.getX()>=(getWidth()-2*BALL_RADIUS)) vx=-vx;
 		if(ball.getY()<=0||ball.getY()>=(getHeight()-2*BALL_RADIUS))vy=-vy;
+		
+	}
+	
+	public void mouseMoved(MouseEvent e){
+		if(e.getX()>0&&e.getX()<(getWidth()-PADDLE_WIDTH)){
+			paddle.setLocation(e.getX(),paddle.getY());
+		}
+	}
+	
+	priavte GObject getCollidingObject(){
 		gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
 		if (gobj!=null){
 			vy=-vy;
@@ -125,12 +133,6 @@ public class Breakout extends GraphicsProgram {
 		gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY()+2*BALL_RADIUS);
 		if (gobj!=null){
 			vy=-vy;
-		}
-	}
-	
-	public void mouseMoved(MouseEvent e){
-		if(e.getX()>0&&e.getX()<(getWidth()-PADDLE_WIDTH)){
-			paddle.setLocation(e.getX(),paddle.getY());
 		}
 	}
 
