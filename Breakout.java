@@ -117,6 +117,9 @@ public class Breakout extends GraphicsProgram {
 			vy=-vy;
 		}
 		gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY()+2*BALL_RADIUS);
+		if (gobj!=null){
+			vy=-vy;
+		}
 	}
 	
 	public void mouseMoved(MouseEvent e){
