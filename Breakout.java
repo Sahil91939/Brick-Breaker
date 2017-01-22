@@ -126,7 +126,7 @@ public class Breakout extends GraphicsProgram {
 		}
 		gobj = getElementAt(ball.getX(),ball.getY());
 		gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
-		GObject collider = getCollidingObject();
+		collider = getCollidingObject();
 		if (collider == paddle){
 			vy=-vy;
 		}
