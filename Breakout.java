@@ -124,15 +124,16 @@ public class Breakout extends GraphicsProgram {
 		
 		GObject collider = getCollidingObject();
 		
-		if(collider == brick){
-			vy=-vy;
-			//remove(gobj);
-		}
-		
 		if(collider == paddle){
 			vy=-vy;
 			
 		}
+		if(collider == brick){
+			vy=-vy;
+			remove(gobj);
+		}
+		
+		
 		
 	}
 	
