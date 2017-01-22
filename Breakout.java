@@ -121,7 +121,7 @@ public class Breakout extends GraphicsProgram {
 		if(gobj == null) gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
 		if(gobj == null) gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
 		if(gobj == null) gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY()+2*BALL_RADIUS);
-		
+		last = gobj;
 		GObject collider = getCollidingObject();
 		
 		if(collider == paddle){
@@ -130,7 +130,7 @@ public class Breakout extends GraphicsProgram {
 		}
 		if(collider == brick){
 			vy=-vy;
-			remove(gobj);
+			remove(last);
 		}
 		
 		
@@ -165,5 +165,6 @@ public class Breakout extends GraphicsProgram {
 	//private instance variables for the velocities of the ball in both x & y direction
 	private double vx,vy=3;
 	private GObject gobj;
+	private GObject last ;
 }
 
