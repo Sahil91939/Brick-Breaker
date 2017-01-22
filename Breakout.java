@@ -118,14 +118,16 @@ public class Breakout extends GraphicsProgram {
 		if(ball.getY()<=0||ball.getY()>=(getHeight()-2*BALL_RADIUS))vy=-vy;
 		gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
 		gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY()+2*BALL_RADIUS);
-		gobj = getElementAt(ball.getX(),ball.getY());
-		gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
-		
 		GObject collider = getCollidingObject();
+		
 		if(collider == brick){
 			vy=-vy;
 			remove(gobj);
-		}else if (collider == paddle){
+		}
+		gobj = getElementAt(ball.getX(),ball.getY());
+		gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
+		GObject collider = getCollidingObject();
+		if (collider == paddle){
 			vy=-vy;
 		}
 		
