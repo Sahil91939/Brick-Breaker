@@ -118,7 +118,7 @@ public class Breakout extends GraphicsProgram {
 			vx=-vx;
 			ball.setLocation(ball.getX(),ball.getY());
 		}
-		if(ball.getY()==0||ball.getX()>=(getHeight()-2*BALL_RADIUS))vy=-vy;
+		if(ball.getY()==0||ball.getY()>=(getHeight()-2*BALL_RADIUS))vy=-vy;
 		gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
 		if (gobj!=null){
 			vy=-vy;
