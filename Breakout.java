@@ -114,7 +114,10 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void checkForCollision(){
-		if(ball.getX()==0||ball.getX()>=(getWidth()-2*BALL_RADIUS)) vx=-vx;
+		if(ball.getX()==0||ball.getX()>=(getWidth()-2*BALL_RADIUS)) {
+			vx=-vx;
+			ball.setLocation(ball.getX(),ball.getY());
+		}
 		if(ball.getY()==0||ball.getX()>=(getHeight()-2*BALL_RADIUS))vy=-vy;
 		gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
 		if (gobj!=null){
