@@ -125,13 +125,6 @@ public class Breakout extends GraphicsProgram {
 		
 		GObject collider = getCollidingObject();
 		
-		/*if(collider == paddle){
-			vy=-vy;
-			
-		}
-		if(collider == brick){
-			vy=-vy;
-		}*/
 		
 		if(collider!=null){
 			vy=-vy;
@@ -161,7 +154,7 @@ public class Breakout extends GraphicsProgram {
 
 	
 	//PRIVATE INSTANCE VARIABLES
-	private GRect brick,paddle ;
+	private GRect paddle,brick ;
 	private Color color;
 	private GOval ball ;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
