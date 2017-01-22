@@ -62,7 +62,7 @@ public class Breakout extends GraphicsProgram {
 
 /** Number of turns */
 	private static final int NTURNS = 3;
-//Delay Time
+//Delay Time in milliseconds
 	private static final int Delay =10;
 	
 /* Method: run() */
