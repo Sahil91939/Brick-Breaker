@@ -112,7 +112,8 @@ public class Breakout extends GraphicsProgram {
 	private void checkForCollision(){
 		if(ball.getX()==0||ball.getX()>=(getWidth()-2*BALL_RADIUS)) vx=-vx;
 		if(ball.getY()==0||ball.getX()>=(getHeight()-2*BALL_RADIUS))vy=-vy;
-		gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
+		
+		
 	}
 	
 	public void mouseMoved(MouseEvent e){
@@ -121,7 +122,12 @@ public class Breakout extends GraphicsProgram {
 		}
 	}
 //public instance variables
-	private GObject gobj;
+	public GObject objectPresent(){
+		
+		GObject gobj = new GObject();
+		return gobj;
+		
+	}
 	
 //PRIVATE INSTANCE VARIABLES
 	private GRect brick,paddle ;
