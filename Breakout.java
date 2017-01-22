@@ -116,7 +116,17 @@ public class Breakout extends GraphicsProgram {
 	private void checkForCollision(){
 		if(ball.getX()<=0||ball.getX()>=(getWidth()-2*BALL_RADIUS)) vx=-vx;
 		if(ball.getY()<=0||ball.getY()>=(getHeight()-2*BALL_RADIUS))vy=-vy;
+		gobj = getElementAt(ball.getX(),ball.getY());
+		gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
+		gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
+		gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY()+2*BALL_RADIUS);
 		GObject collider = getCollidingObject();
+		if(collider == brick){
+			vy=-vy;
+			remove(gobj);
+		}else if (collider == paddle){
+			vy=-vy;
+		}
 		
 	}
 	
@@ -127,34 +137,13 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private GObject getCollidingObject(){
-		gobj = getElementAt(ball.getX(),ball.getY());
-		
-		if (gobj!=null){ return brick ;
+		if (gobj!=null&&ball.getY()<getHeight()){
+			return brick;
+		}else if(gobj!=null&&ball.getY()>getHeight()){
+			return paddle;
 		}else{
 			return null;
 		}
-		
-		gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
-		
-		if (gobj!=null){ 
-			return brick ;
-		}else{ 
-			return null;
-		}
-		
-		gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
-		
-		if (gobj!=null&&ball.getY()<getHeight()){
-			return paddle;
-		}else return null;
-		
-		gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY()+2*BALL_RADIUS);
-		
-		if (gobj!=null&&ball.getY()<getHeight()){
-			return paddle;
-		}else {
-			return null;
-			}
 	}
 
 	
@@ -167,3 +156,32 @@ public class Breakout extends GraphicsProgram {
 	private double vx,vy=3;
 	private GObject gobj;
 }
+
+/*gobj = getElementAt(ball.getX(),ball.getY());
+
+if (gobj!=null){ return brick ;
+}else{
+	return null;
+}
+
+gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
+
+if (gobj!=null){ 
+	return brick ;
+}else{ 
+	return null;
+}
+
+gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
+
+if (gobj!=null&&ball.getY()<getHeight()){
+	return paddle;
+}else return null;
+
+gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY()+2*BALL_RADIUS);
+
+if (gobj!=null&&ball.getY()<getHeight()){
+	return paddle;
+}else {
+	return null;
+	}*/
