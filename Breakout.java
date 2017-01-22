@@ -122,7 +122,7 @@ public class Breakout extends GraphicsProgram {
 		
 		if(collider == brick){
 			vy=-vy;
-			remove(gobj);
+			remove(collider);
 		}
 		gobj = getElementAt(ball.getX(),ball.getY());
 		gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
