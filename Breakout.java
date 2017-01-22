@@ -129,7 +129,7 @@ public class Breakout extends GraphicsProgram {
 	private GObject getCollidingObject(){
 		gobj = getElementAt(ball.getX(),ball.getY());
 		if (gobj!=null) return brick ;else return null;
-		gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY());
+		gobj = getElementAt( ball.getX() + 2*BALL_RADIUS , ball.getY() );
 		if (gobj!=null){ 
 			return brick ;
 		}else{ 
