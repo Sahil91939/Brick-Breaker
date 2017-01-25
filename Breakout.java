@@ -71,25 +71,28 @@ public class Breakout extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 		setup();
 		addMouseListeners();
+		int No_turns=NTURNS;
+		while(No_turns!=0){
 		ball =new GOval(2*BALL_RADIUS,2*BALL_RADIUS);
 		ball.setColor(Color.black);
 		ball.setFilled(true);
 		add(ball,getWidth()/2-BALL_RADIUS/2,getHeight()/2-BALL_RADIUS/2);
 		vx = rgen.nextDouble(1.0,3.0);
-		if(rgen.nextBoolean(0.5)) vx = -vx;
-		int No_turns=NTURNS;
-		while(No_turns!=0){
-			GLabel label = new GLabel("Lives "+No_turns);
-			label.setFont("Times New Roman-16");
-			add(label,0,getHeight());
-			while(ball.getY()<getHeight()-2*BALL_RADIUS&&No_bricks!=0){
-				ball.move(vx, vy);
-				checkForCollision();
-				pause(Delay);
-			}
-			No_turns--;
-			remove(label);
+		if(rgen.nextBoolean(0.5)) vx = -vx;		
+		GLabel label = new GLabel("Lives "+No_turns);
+		label.setFont("Times New Roman-16");
+		add(label,0,getHeight());
+		
+		while(ball.getY()<getHeight()-2*BALL_RADIUS&&No_bricks!=0){
+			ball.move(vx, vy);
+			checkForCollision();
+			pause(Delay);
+		}
+		
+		No_turns--;
+		remove(label);
 		}	
+			
 		remove (ball);
 		GLabel Game_Over=new GLabel("Game Over");
 		Game_Over.setFont("Times New Roman-36");
