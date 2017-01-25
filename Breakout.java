@@ -84,7 +84,7 @@ public class Breakout extends GraphicsProgram {
 				checkForCollision();
 				pause(Delay);
 			}
-			NO_turns--;
+			No_turns--;
 		}	
 		remove (ball);
 		GLabel Game_Over=new GLabel("Game Over");
