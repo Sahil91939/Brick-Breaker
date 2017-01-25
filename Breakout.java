@@ -130,9 +130,7 @@ public class Breakout extends GraphicsProgram {
 			vy=-vy;
 		}
 		
-		if(collider==paddle){
-			remove(gobj);
-		}
+		
 		
 	}
 	
@@ -145,9 +143,9 @@ public class Breakout extends GraphicsProgram {
 	//this method return the object on which the ball collides
 	
 	private GObject getCollidingObject(){
-		if (gobj!=null&&ball.getY()<getHeight()){
+		if (gobj!=null&&ball.getY()<getHeight()/2){
 			return brick;
-		}else if(gobj!=null&&ball.getY()>getHeight()){
+		}else if(gobj!=null&&ball.getY()>getHeight()/2){
 			return paddle;
 		}else{
 			return null;
