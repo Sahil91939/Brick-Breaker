@@ -162,7 +162,7 @@ public class Breakout extends GraphicsProgram {
 		if (gobj!=null&&ball.getY()<getHeight()/2){
 			No_bricks--;
 			return brick;
-		}else if(gobj!=null&&ball.getY()>getHeight()/2&&ball.getY()<getHeight()-BRICK_Y_OFFSET){
+		}else if(gobj!=null&&ball.getY()>getHeight()/2){
 			return paddle;
 		}else{
 			return null;
