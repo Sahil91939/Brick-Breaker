@@ -90,6 +90,7 @@ public class Breakout extends GraphicsProgram {
 			remove(ball);
 			No_turns--;
 			remove(label);
+			pause(100);
 		}	
 			
 		remove(paddle);
