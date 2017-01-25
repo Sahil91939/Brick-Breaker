@@ -92,7 +92,7 @@ public class Breakout extends GraphicsProgram {
 			remove(label);
 		}	
 			
-		remove (ball);
+		remove(paddle);
 		GLabel Game_Over=new GLabel("Game Over");
 		Game_Over.setFont("Times New Roman-36");
 		add(Game_Over,getWidth()/2-Game_Over.getWidth()/2,getHeight()/2-Game_Over.getAscent()/2);
