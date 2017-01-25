@@ -127,6 +127,7 @@ public class Breakout extends GraphicsProgram {
 		
 		
 		if(collider!=null){
+			vx=-vx;
 			vy=-vy;
 		}
 		
