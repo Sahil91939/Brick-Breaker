@@ -130,7 +130,9 @@ public class Breakout extends GraphicsProgram {
 			vy=-vy;
 		}
 		
-		
+		if(collider==brick){
+			remove(gobj);
+		}
 		
 	}
 	
