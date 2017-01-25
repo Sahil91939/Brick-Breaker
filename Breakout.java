@@ -185,6 +185,6 @@ public class Breakout extends GraphicsProgram {
 	//private instance variables for the velocities of the ball in both x & y direction
 	private double vx,vy=3;
 	private GObject gobj;
-	private int No_bricks=100;
+	private int No_bricks=NBRICKS_PER_ROW*NBRICK_ROWS;
 }
 
