@@ -152,7 +152,7 @@ public class Breakout extends GraphicsProgram {
 				vx=-vx;
 			}
 			if(ball.getX()==paddle.getX()+PADDLE_WIDTH&&vx<0){
-				
+				vx=-vx;
 			}
 		}
 				
