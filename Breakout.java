@@ -148,7 +148,7 @@ public class Breakout extends GraphicsProgram {
 		
 		if(collider==paddle){
 			vy=-vy;
-			if(ball.getY()>getHeight()-PADDLE_Y_OFFSET-PADDLE_HEIGHT-2*BALL_RADIUS-1){
+			if(ball.getY()>getHeight()-PADDLE_Y_OFFSET-PADDLE_HEIGHT){
 				vx=-vx;
 			}
 		}
