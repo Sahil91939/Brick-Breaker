@@ -80,6 +80,8 @@ public class Breakout extends GraphicsProgram {
 		int No_turns=NTURNS;
 		while(No_turns!=0){
 			GLabel label = new GLabel("Lives "+No_turns);
+			label.setFont("Times New Roman-8");
+			add(label,0,getHeight()-label.getHeight());
 			while(ball.getY()<getHeight()-2*BALL_RADIUS&&No_bricks!=0){
 				ball.move(vx, vy);
 				checkForCollision();
