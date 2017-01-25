@@ -83,7 +83,7 @@ public class Breakout extends GraphicsProgram {
 			pause(Delay);
 		}
 		remove (ball);
-		add(new GLabel("Game_Over",100,50));
+		add(new GLabel("Game_Over",getWidth()/2,getHeight()/2));
 	}
 
 	private void setup(){
