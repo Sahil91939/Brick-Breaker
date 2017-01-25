@@ -165,5 +165,6 @@ public class Breakout extends GraphicsProgram {
 	private double vx,vy=3;
 	private GObject gobj;
 	private GObject last ;
+	private int No_bricks=100;
 }
 
