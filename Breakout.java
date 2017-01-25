@@ -148,7 +148,9 @@ public class Breakout extends GraphicsProgram {
 		
 		if(collider==paddle){
 			vy=-vy;
-			
+			if(ball.getY()>paddle.getY()-2*BALL_RADIUS+1){
+				
+			}
 		}
 				
 		if(collider==brick){
