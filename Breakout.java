@@ -79,6 +79,7 @@ public class Breakout extends GraphicsProgram {
 		if(rgen.nextBoolean(0.5)) vx = -vx;
 		int No_turns=NTURNS;
 		while(No_turns!=0){
+			GLabel label = new GLabel("Lives "+No_turns);
 			while(ball.getY()<getHeight()-2*BALL_RADIUS&&No_bricks!=0){
 				ball.move(vx, vy);
 				checkForCollision();
