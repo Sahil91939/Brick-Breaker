@@ -77,7 +77,7 @@ public class Breakout extends GraphicsProgram {
 		add(ball,getWidth()/2-BALL_RADIUS/2,getHeight()/2-BALL_RADIUS/2);
 		vx = rgen.nextDouble(1.0,3.0);
 		if(rgen.nextBoolean(0.5)) vx = -vx;
-		while(ball.getY()<getHeight()-2*BALL_RADIUS||No_bricks==0){
+		while(ball.getY()<getHeight()-2*BALL_RADIUS&&No_bricks==0){
 			ball.move(vx, vy);
 			checkForCollision();
 			pause(Delay);
