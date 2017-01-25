@@ -82,7 +82,7 @@ public class Breakout extends GraphicsProgram {
 			GLabel label = new GLabel("Lives "+No_turns);
 			label.setFont("Times New Roman-16");
 			add(label,0,getHeight());
-			while(ball.getY()<getHeight()-2*BALL_RADIUS&&No_bricks!=0){
+			while(ball.getY()<getHeight()-2*BALL_RADIUS && No_bricks!=0){
 				ball.move(vx, vy);
 				checkForCollision();
 				pause(Delay);
@@ -96,6 +96,12 @@ public class Breakout extends GraphicsProgram {
 		GLabel Game_Over=new GLabel("Game Over");
 		Game_Over.setFont("Times New Roman-36");
 		add(Game_Over,getWidth()/2-Game_Over.getWidth()/2,getHeight()/2-Game_Over.getAscent()/2);
+		if(No_bricks==0){
+			GLabel won =new GLabel("You Won");
+			won.setFont("Times New Roman-40");
+			won.setColor(Color.red);
+			add(won,getWidth()/2-won.getWidth()/2,2*getHeight()/3);
+		}
 	}
 
 	private void setup(){
