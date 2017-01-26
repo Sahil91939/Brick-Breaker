@@ -156,7 +156,7 @@ public class Breakout extends GraphicsProgram {
 		}
 				
 		if(collider==brick){
-			bounceClip.play;
+			bounceClip.play();
 			vy=-vy;
 			remove(gobj);
 		}
