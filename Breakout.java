@@ -148,8 +148,8 @@ public class Breakout extends GraphicsProgram {
 		GObject collider = getCollidingObject();
 		
 		if(collider==paddle){
-				vy=0;vx=0;
-				add(new GLabel("ball height="+ball.getY()+(2*BALL_RADIUS)+",paddle height"+paddle.getY()),60,60);
+				vy=-vy;
+				
 		}
 				
 		if(collider==brick){
