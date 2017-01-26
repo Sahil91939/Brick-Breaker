@@ -150,11 +150,13 @@ public class Breakout extends GraphicsProgram {
 		if(collider==paddle){
 			if(ball.getY() >= getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS && ball.getY() < getHeight() - PADDLE_Y_OFFSET - PADDLE_HEIGHT - BALL_RADIUS + 4){	
 				vy=-vy;
+				bounceClip.play();
 			}	
 				
 		}
 				
 		if(collider==brick){
+			bounceClip.play;
 			vy=-vy;
 			remove(gobj);
 		}
