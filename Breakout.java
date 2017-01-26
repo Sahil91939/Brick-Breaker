@@ -72,6 +72,7 @@ public class Breakout extends GraphicsProgram {
 		setup();
 		addMouseListeners();
 		int No_turns=NTURNS;
+		waitForClick();
 		while(No_turns!=0){
 			ball =new GOval(BALL_RADIUS,BALL_RADIUS);
 			ball.setColor(Color.black);
