@@ -144,7 +144,7 @@ public class Breakout extends GraphicsProgram {
 		if(gobj == null) gobj = getElementAt(ball.getX(),ball.getY()+2*BALL_RADIUS);
 		if(gobj == null) gobj = getElementAt(ball.getX()+2*BALL_RADIUS,ball.getY()+2*BALL_RADIUS);
 		
-		
+		AudioClip bounceClip = MediaTools.loadAudioClip("bounce.au");
 		GObject collider = getCollidingObject();
 		
 		if(collider==paddle){
