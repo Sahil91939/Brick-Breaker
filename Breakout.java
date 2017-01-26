@@ -100,7 +100,7 @@ public class Breakout extends GraphicsProgram {
 		Game_Over.setFont("Times New Roman-36");
 		add(Game_Over,getWidth()/2-Game_Over.getWidth()/2,getHeight()/2-Game_Over.getAscent()/2);
 		if(No_bricks==0){
-			GLabel won =new GLabel("You Won");
+			GLabel won =new GLabel("You Won!");
 			won.setFont("Times New Roman-40");
 			won.setColor(Color.red);
 			add(won,getWidth()/2-won.getWidth()/2,2*getHeight()/3);
